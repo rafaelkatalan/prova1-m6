@@ -34,8 +34,10 @@ class TurtleController(Node):
         if self.currentPose == Pose(x = 40.0,y = 40.0):
             return
         if len(self.path)>0:
+            print(f"ida{self.path}")
             nextPose = self.path[0]
         else:
+            print(f"volta{self.volta}")
             nextPose = self.volta[len(self.volta)-1]
         print(f"np: {nextPose.x},{nextPose.y}")
         self.pose_subscription.callback
